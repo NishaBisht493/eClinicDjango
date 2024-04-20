@@ -1,0 +1,949 @@
+{% load static %}
+<!doctype html>
+<html lang = "en">
+    <head>
+        <!-- Meta Tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="Site keywords here">
+		<meta name="description" content="">
+		<meta name='copyright' content=''>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- Title -->
+        <title>Medicare - Your Trusted Partner in Wellness</title>
+		
+		<!-- Favicon -->
+        <link rel="icon" href="{% static 'eclinic_app/img/favicon.png' %}">
+		
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type = "text/css" href="{% static 'eclinic_app/css/bootstrap.min.css' %}">
+		<!-- Nice Select CSS -->
+		<link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/nice-select.css' %}">
+		<!-- Font Awesome CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/font-awesome.min.css' %}">
+		<!-- icofont CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/icofont.css' %}">
+		<!-- Slicknav -->
+		<link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/slicknav.min.css' %}">
+		<!-- Owl Carousel CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/owl-carousel.css' %}">
+		<!-- Datepicker CSS -->
+		<link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/datepicker.css' %}">
+		<!-- Animate CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/animate.min.css' %}">
+		<!-- Magnific Popup CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/magnific-popup.css' %}">
+		
+		<!-- Medipro CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/normalize.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/responsive.css' %}">
+		
+		<style>
+			
+			.hello-msg{
+				font-size:18px;
+				padding:0px;
+				padding-top: 25px;
+				padding-bottom: 30px;
+			}
+			.popup{
+				width: 700px;
+				background-color: #9da7ff;
+				border-radius:6px;
+				border: 15px solid #04084a;
+				position: fixed;
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, -50%) scale(0.1);
+				text-align: center;
+				padding: 0px 30px 30px;
+				color: #333;
+				visibility: hidden;
+				transition: transform 0.4s, top 0.4s;
+				z-index: 1000;
+			}
+			.open-popup{
+				top: 50%;
+				visibility: visible;
+				transform: translate(-50%, -50%) scale(1);
+			}
+			.popup h2{
+				font-size:38px;
+				font-weight: 500;
+				margin: 30px 0px 10px;
+				color: white;
+				text-decoration:underline;
+			}
+			.popup p{
+				font-size:18px;
+				font-weight: 300;
+				color: white;
+				text-align:justify;
+			}
+			.popup button{
+				width: 30%;
+				margin-top:50px;
+				padding: 10px 0px;
+				background-color: #2163a4;
+				border: 0;
+				outline: none;
+				font-size: 18px;
+				border-radius: 4px;
+				cursor : pointer;
+				color: white;
+				box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+			}
+			
+		</style>
+    </head>
+    <body>
+	
+		<!-- Preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="loader-outter"></div>
+                <div class="loader-inner"></div>
+
+                <div class="indicator"> 
+                    <svg width="16px" height="12px">
+                        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader -->
+	
+		<!-- Header Area -->
+		<header class="header" >
+			<!-- Topbar -->
+			<div class="topbar">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-5 col-12">
+							<!-- Contact -->
+							<ul class="top-link">
+								<li></li>
+							</ul>
+							<!-- End Contact -->
+						</div>
+						<div class="col-lg-6 col-md-7 col-12">
+							<!-- Top Contact -->
+							<ul class="top-contact">
+								<li><i class="fa fa-phone"></i>+91 12345 67890</li>
+								<li><i class="fa fa-envelope"></i><a href="mailto:nishabisht165@gmail.com">supportmedicare@gmail.com</a></li>
+							</ul>
+							<!-- End Top Contact -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Topbar -->
+
+			<!-- Header Inner -->
+			<div class="header-inner">
+				<div class="container">
+					<div class="inner">
+						<div class="row">
+							<div class="col-lg-3 col-md-3 col-12">
+								<!-- Start Logo -->
+								<div class="logo">
+									<a href="{% url 'home' %}"><img src="{% static 'eclinic_app/img/logo.jpg' %}" alt="#"></a>
+								</div>
+								<!-- End Logo -->
+								<!-- Mobile Nav -->
+								<div class="mobile-nav"></div>
+								<!-- End Mobile Nav -->
+							</div>
+							<div class="col-lg-6 col-md-9 col-12">
+								<!-- Main Menu -->
+								<div class="main-menu">
+									<nav class="navigation">
+										<ul class="nav menu">
+											<li class="active"><a href="{% url 'home' %}">Home</a>
+											</li>
+											<li><a href="{% url 'doctors' %}">Doctos </a></li>
+											<li><a href="#services-section">Services </a></li>
+											{% comment %} <li><a href="#pricing">Plans</a></li> {% endcomment %}
+											<li><a href="{% url 'blog' %}">Blogs</a></li>
+											<li><a href="{% url 'contactus' %}">Contact Us</a></li>
+										</ul>
+									</nav>
+									
+								</div>
+								<!--/ End Main Menu -->
+							</div>
+								
+							{% if user.is_authenticated %}
+							<span class = "hello-msg">Hello, {{request.user}} </span>
+							
+							<div class="col-lg-1 col-6">
+								<div class="get-quote">
+									<a href = "{% url 'logout' %}" class = "btn">Logout</a>
+								</div>
+							</div>
+
+							{% else %}
+
+							<div class="col-lg-1 col-6">
+								<div class="get-quote">
+									<a href = "{% url 'signup' %}" class = "btn">Sign Up / Sign In</a>
+								</div>
+							</div>
+
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Header Inner -->
+		</header>
+		<!-- End Header Area -->
+		
+		<!-- Slider Area -->
+		<section class="slider">
+			<div class="hero-slider">
+				<!-- Start Single Slider -->
+				<div class="single-slider" style="background-image:url('{% static 'eclinic_app/img/slider2.jpg' %}')">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1>We Provide <span>Medical</span> Services That You Can <span>Trust!</span></h1>
+									<p>Our services prioritize your health and peace of mind. With a dedicated team and proven expertise, we ensure your well-being is in safe hands.</p>
+									<div class="button">
+										<a href="{% url 'appointment' %}" class="btn">Get Appointment</a>
+										<a href="#aboutus" class="btn primary">Learn More</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Single Slider -->
+				<!-- Start Single Slider -->
+				<div class="single-slider" style="background-image:url('{% static 'eclinic_app/img/slider.jpg' %}')">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1>We Provide <span>Medical</span> Services That You Can <span>Trust!</span></h1>
+									<p>Our services prioritize your health and peace of mind. With a dedicated team and proven expertise, we ensure your well-being is in safe hands.</p>
+									<div class="button">
+										<a href="#appointment" class="btn">Get Appointment</a>
+										<a href="#aboutus" class="btn primary">About Us</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Start End Slider -->
+				<!-- Start Single Slider -->
+				<div class="single-slider" style="background-image:url('{% static 'eclinic_app/img/slider3.jpg' %}')">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1>We Provide <span>Medical</span> Services That You Can <span>Trust!</span></h1>
+									<p>Our services prioritize your health and peace of mind. With a dedicated team and proven expertise, we ensure your well-being is in safe hands.</p>
+									<div class="button">
+										<a href="#appointment" class="btn">Get Appointment</a>
+										<a href="{% url 'contactus' %}" class="btn primary">Conatct Now</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Single Slider -->
+			</div>
+		</section>
+		<!--/ End Slider Area -->
+		
+		<!-- Start Schedule Area -->
+		<section class="schedule">
+			<div class="container">
+				<div class="schedule-inner">
+					<div class="row">
+						<div class="col-lg-4 col-md-6 col-12 ">
+							<!-- single-schedule -->
+							<div class="single-schedule first">
+								<div class="inner">
+									<div class="icon">
+										<i class="fa fa-ambulance"></i>
+									</div>
+									<div class="single-content">
+										<span>24 / 7</span>
+										<h4>Emergency Cases</h4>
+										<p>Our team is dedicated to handling emergency cases with urgency, skill, and compassion. Contact us to know more about our services.</p>
+										<a href="{% url 'contactus' %}">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-12">
+							<!-- single-schedule -->
+							<div class="single-schedule middle">
+								<div class="inner">
+									<div class="icon">
+										<i class="icofont-prescription"></i>
+									</div>
+									<div class="single-content">
+										<span>Doctors</span>
+										<h4>Our Doctors</h4>
+										<p> Our dedicated team of doctors provides healthcare solutions tailored to your needs. Click below to take the first step towards better health.</p>
+										<a href="{% url 'doctors' %}">EXPLORE NOW<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-12">
+							<!-- single-schedule -->
+							<div class="single-schedule middle">
+								<div class="inner">
+									<div class="icon">
+										<i class="icofont-ui-clock"></i>
+									</div>
+									<div class="single-content">
+										<span>Convenient</span>
+										<h4>Appointment Booking</h4>
+										<p>Allow visitors to easily schedule appointments online or provide contact information for scheduling. Book your appointment with ease.</p>
+										<a href="#appointment">BOOK NOW<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/End Start schedule Area -->
+
+		<!-- Start Feautes -->
+		<section class="Feautes section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>We Are Always Ready to Help You & Your Family</h2>
+							<img src="{% static 'eclinic_app/img/section-img.png' %}" alt="#">
+							<p>At Medicare, we're dedicated to supporting you and your family's health journey with compassion and expertise. Our team is always prepared to provide the care and assistance you need, whenever you need it.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features">
+							<div class="signle-icon">
+								<i class="icofont icofont-ambulance-cross"></i>
+							</div>
+							<h3>Emergency Help</h3>
+							<p> Swift, expert assistance available whenever you need it most.</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features">
+							<div class="signle-icon">
+								<i class="icofont icofont-medical-sign-alt"></i>
+							</div>
+							<h3>Enriched Pharmacy</h3>
+							<p>Where your health meets our expertise for enriched well-being.</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features last">
+							<div class="signle-icon">
+								<i class="icofont icofont-stethoscope"></i>
+							</div>
+							<h3>Medical Treatment</h3>
+							<p>Tailored care with expertise, delivered with compassion.</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Feautes -->
+		
+		<!-- Start Fun-facts -->
+		<div id="fun-facts" class="fun-facts section overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-home"></i>
+							<div class="content">
+								<span class="counter">312</span>
+								<p>Hospital Rooms</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-user-alt-3"></i>
+							<div class="content">
+								<span class="counter">104</span>
+								<p>Specialist Doctors</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont-simple-smile"></i>
+							<div class="content">
+								<span class="counter">1234</span>
+								<p>Happy Patients</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-table"></i>
+							<div class="content">
+								<span class="counter">10</span>
+								<p>Years of Experience</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Fun-facts -->
+		
+		<!-- Start Why choose -->
+		<section class="why-choose section" id = "aboutus">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-12">
+						<!-- Start Choose Left -->
+						<div class="choose-left">
+							<h3>Who We Are</h3>
+							<p>We are a trusted healthcare provider, driven by a mission to deliver exceptional medical treatment tailored to your individual needs. With a team of skilled professionals, we prioritize your well-being. Our commitment extends beyond mere treatment; we strive to build lasting relationships with our patients.</p>
+							<p>At our clinic, you'll find a welcoming environment where you and your family can receive personalized care and support. Trust us to be your partner in health, dedicated to helping you achieve optimal wellness and vitality.</p>
+							<div class="row">
+								<div class="col-lg-6">
+									<ul class="list">
+										<li><i class="fa fa-caret-right"></i>Trusted Healthcare Provider</li>
+										<li><i class="fa fa-caret-right"></i>Exceptional Medical Treatment</li>
+										<li><i class="fa fa-caret-right"></i>Dedicated Team</li>
+									</ul>
+								</div>
+								<div class="col-lg-6">
+									<ul class="list">
+										<li><i class="fa fa-caret-right"></i>Prioritizing Patient Well-being </li>
+										<li><i class="fa fa-caret-right"></i>Lasting Patient Relationships</li>
+										<li><i class="fa fa-caret-right"></i>Personalized Care and Support</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- End Choose Left -->
+					</div>
+					<div class="col-lg-6 col-12">
+						<!-- Start Choose Rights -->
+						<div class="choose-right">
+							<div class="video-image">
+								<!-- Video Animation -->
+								<div class="promo-video">
+									<div class="waves-block">
+										<div class="waves wave-1"></div>
+										<div class="waves wave-2"></div>
+										<div class="waves wave-3"></div>
+									</div>
+								</div>
+								<!--/ End Video Animation -->
+								<a href="https://www.youtube.com/watch?v=TgYY6cRazHM" class="video video-popup mfp-iframe"><i class="fa fa-play"></i></a>
+							</div>
+						</div>
+						<!-- End Choose Rights -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Why choose -->
+		
+		<!-- Start Call to action -->
+		<section class="call-action overlay" data-stellar-background-ratio="0.5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-12">
+						<div class="content">
+							<h2>Do you need Emergency Medical Care? Call @ 12345 67890</h2>
+							<p>Our dedicated team is ready to provide immediate assistance whenever you need it.</p>
+							<div class="button">
+								<a href="{% url 'contactus' %}" class="btn">Contact Now <i class="fa fa-long-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Call to action -->
+		
+		<!-- Start portfolio -->
+		<section class="portfolio section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>We Maintain Cleanliness Rules Inside Our Hospital</h2>
+							<img src="{% static 'eclinic_app/img/section-img.png' %}" alt="#">
+							<p>Ensuring a safe and hygienic environment, cleanliness is a top priority within our hospital. We adhere strictly to sanitation protocols, fostering a healthy space for patient care and recovery.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12 col-12">
+						<div class="owl-carousel portfolio-slider">
+							<div class="single-pf">
+								<img src="{% static 'eclinic_app/img/pf1.jpg' %}" alt="#">
+								<a href="{% url 'portfolio' %}" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="{% static 'eclinic_app/img/pf2.jpg' %}" alt="#">
+								<a href="{% url 'portfolio' %}" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="{% static 'eclinic_app/img/pf3.jpg' %}" alt="#">
+								<a href="{% url 'portfolio' %}" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="{% static 'eclinic_app/img/pf4.jpg' %}" alt="#">
+								<a href="{% url 'portfolio' %}" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="{% static 'eclinic_app/img/pf1.jpg' %}" alt="#">
+								<a href="{% url 'portfolio' %}" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="{% static 'eclinic_app/img/pf2.jpg' %}" alt="#">
+								<a href="{% url 'portfolio' %}" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="{% static 'eclinic_app/img/pf3.jpg' %}" alt="#">
+								<a href="{% url 'portfolio' %}" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="{% static 'eclinic_app/img/pf4.jpg' %}" alt="#">
+								<a href="{% url 'portfolio' %}" class="btn">View Details</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End portfolio -->
+		
+		<!-- Start service -->
+		<section class="services section" id = "services-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>We Offer Different Services To Improve Your Health</h2>
+							<img src="{% static 'eclinic_app/img/section-img.png' %}" alt="#">
+							<p>Explore a range of services tailored to enhance your well-being. From preventive care to specialized treatments, we offer comprehensive solutions to support your journey towards better health.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-prescription"></i>
+							<h4><a href="#services">General Treatment</a></h4>
+							<p>From routine check-ups to comprehensive care plans, our general treatment services cater to all your healthcare needs with expertise and compassion. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-tooth"></i>
+							<h4><a href="#services">Teeth Whitening</a></h4>
+							<p>Experience a brighter smile with our professional teeth whitening services, enhancing your confidence and dental health.</p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-heart-alt"></i>
+							<h4><a href="#services">Heart Surgery</a></h4>
+							<p>LExperience expert care and advanced techniques with our heart surgery services, dedicated to restoring cardiac health and enhancing overall well-being. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-listening"></i>
+							<h4><a href="#services">Ear Treatment</a></h4>
+							<p>Find relief and restore auditory health with our comprehensive ear treatment services, addressing a range of conditions to promote optimal hearing and comfort. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-eye-alt"></i>
+							<h4><a href="#services">Vision Problems</a></h4>
+							<p>Regain clarity and comfort with our specialized vision problem treatments, offering personalized solutions for improved sight and overall well-being. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-blood"></i>
+							<h4><a href="#services">Blood Transfusion</a></h4>
+							<p>Restoring vitality and health, our blood transfusion services provide life-saving support when you need it most, ensuring optimal care and recovery.</p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End service -->
+{% comment %} 		
+		<!-- Pricing Table -->
+		<section class="pricing-table section" id = "pricing">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>We Provide You The Best Treatment In Resonable Price</h2>
+							<img src="{% static 'eclinic_app/img/section-img.png' %}" alt="#">
+							<p>Experience top-tier treatment at affordable rates, ensuring your health comes first without compromising on quality.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<!-- Table Head -->
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont icofont-ui-cut"></i>
+								</div>
+								<h4 class="title">Plastic Surgery</h4>
+								<div class="price">
+									<p class="amount">Rs. 55199<span>/ Per Visit</span></p>
+								</div>	
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>Rhinoplasty - Nose Reshaping</li>
+								<li><i class="icofont icofont-ui-check"></i>Breast Augmentation or Reduction - Saline Implants / Silicone Gel Implants</li>
+								<li class="cross"><i class="icofont icofont-ui-close"></i>Liposuction - Abdomen, Thighs, Arms, Chin and neck</li>
+								<li class="cross"><i class="icofont icofont-ui-close"></i>Facelift or Rhytidectomy</li>
+								<li class="cross"><i class="icofont icofont-ui-close"></i>Blepharoplasty - Eyelid Surgery - Upper Blepharoplasty / Lower Blepharoplasty</li>
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" href="#pricing" onclick = "openPopUp()">Buy Now</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<!-- Table Head -->
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont icofont-tooth"></i>
+								</div>
+								<h4 class="title">Teeth Whitening</h4>
+								<div class="price">
+									<p class="amount">Rs. 11299<span>/ Per Visit</span></p>
+								</div>	
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>Initial dental examination and consultation</li>
+								<li><i class="icofont icofont-ui-check"></i>Oral hygiene education and tips for long-lasting results</li>
+								<li><i class="icofont icofont-ui-check"></i>Follow-up appointments for monitoring and adjustments</li>
+								<li class="cross"><i class="icofont icofont-ui-close"></i>Customized whitening trays for at-home maintenance</li>
+								<li class="cross"><i class="icofont icofont-ui-close"></i>Professional teeth whitening using advanced techniques</li>
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" href="#pricing" onclick = "openPopUp()">Buy Now</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<!-- Table Head -->
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont-heart-beat"></i>
+								</div>
+								<h4 class="title">Heart Surgery</h4>
+								<div class="price">
+									<p class="amount">Rs. 70999<span>/ Per Visit</span></p>
+								</div>	
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>Pre-operative evaluation and consultation</li>
+								<li><i class="icofont icofont-ui-check"></i>Surgical procedure performed by experienced cardiac surgeons</li>
+								<li><i class="icofont icofont-ui-check"></i>Post-operative care and monitoring</li>
+								<li><i class="icofont icofont-ui-check"></i>Rehabilitation and cardiac wellness program</li>
+								<li><i class="icofont icofont-ui-check"></i>Follow-up consultations and cardiac health assessments</li>
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" href="#pricing" onclick = "openPopUp()">Buy Now</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+				</div>	
+			</div>	
+		</section>	
+		<!--/ End Pricing Table -->
+
+		<div class = "container">
+			<div class = "popup" id = "popup">
+				<h2>Premium Services</h2>
+				<p>To access our premium features, you have two options: pay now for immediate access or continue exploring our platform and return when you're ready. Our premium services offer enhanced functionality and exclusive benefits designed to elevate your experience. Whether you choose to upgrade now or later, we're here to support you every step of the way. Feel free to explore further and decide what works best for you.</p>
+				<button type="button" onclick = "closePopUp()">Pay Now</button>
+				<button type="button" onclick = "closePopUp()">BACK</button>
+			</div>
+			<div class="overlay" id="overlay"></div>
+		</div>
+		 {% endcomment %}
+
+		<!-- Start Blog Area -->
+		<section class="blog section" id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Keep up with Our Most Recent Medical News.</h2>
+							<img src="{% static 'eclinic_app/img/section-img.png' %}" alt="#">
+							<p>Stay informed with our latest medical updates, covering breakthroughs, advancements, and health tips.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="{% static 'eclinic_app/img/blog1.jpg' %}" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">22 Jan, 2024</div>
+									<h2><a href="{% url 'blog' %}">Eating a dozen eggs per week may not affect your cholesterol</a></h2>
+									<p class="text">Eggs have many nutrients, but recommendations for egg consumption have changed over the years.</p>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="{% static 'eclinic_app/img/blog2.jpg' %}" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">15 Jul, 2023</div>
+									<h2><a href="{% url 'blog' %}">Top five way for solving teeth problems</a></h2>
+									<p class="text">Regular Dental Check-ups, Brushing and Flossing, Dental Fillings, Dental Crowns and Orthodontic Treatment.</p>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="{% static 'eclinic_app/img/blog3.jpg' %}" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">6 April, 2024</div>
+									<h2><a href="{% url 'blog' %}">Brain health: Obesity, high-fat diet may speed up aging</a></h2>
+									<p class="text">Obesity and a high-fat diet may damage blood vessels in the brain and accelerate aging, a new study in mice suggests.</p>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Blog Area -->
+		
+		<!-- Start clients -->
+		<div class="clients overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-12">
+						<div class="owl-carousel clients-slider">
+							<div class="single-clients">
+								<img src="{% static 'eclinic_app/img/client1.png' %}" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="{% static 'eclinic_app/img/client2.png' %}" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="{% static 'eclinic_app/img/client3.png' %}" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="{% static 'eclinic_app/img/client4.png' %}" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="{% static 'eclinic_app/img/client5.png' %}" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="{% static 'eclinic_app/img/client1.png' %}" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="{% static 'eclinic_app/img/client2.png' %}" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="{% static 'eclinic_app/img/client3.png' %}" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="{% static 'eclinic_app/img/client4.png' %}" alt="#">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/End clients -->
+		
+		{% comment %} <!-- Start Newsletter Area -->
+		<section class="newsletter section">
+			<div class="container">
+				<div class="row ">
+					<div class="col-lg-6  col-12">
+						<!-- Start Newsletter Form -->
+						<div class="subscribe-text ">
+							<h6>Sign up for newsletter</h6>
+							<p class="">Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu,<br> homero alterum.</p>
+						</div>
+						<!-- End Newsletter Form -->
+					</div>
+					<div class="col-lg-6  col-12">
+						<!-- Start Newsletter Form -->
+						<div class="subscribe-form ">
+							<form action="{% static 'eclinic_app/mail/mail.php' %}" method="get" target="_blank" class="newsletter-inner">
+								<input name="EMAIL" placeholder="Your email address" class="common-input" onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'Your email address'" required="" type="email">
+								<button class="btn">Subscribe</button>
+							</form>
+						</div>
+						<!-- End Newsletter Form -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /End Newsletter Area -->
+		{% endcomment %}
+		
+		<!-- Footer Area -->
+		<footer id="footer" class="footer ">
+			<!-- Copyright -->
+			<div class="copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-12">
+							<div class="copyright-content">
+								<p>© Copyright 2024  |  All Rights Reserved by <a href="https://www.medicare.com" target="_blank">medicare.com</a> </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Copyright -->
+		</footer>
+		<!--/ End Footer Area -->
+		<script>
+			let popup = document.getElementById("popup");
+		
+			function openPopUp() {
+				popup.classList.add("open-popup");
+				overlay.classList.add("open-overlay");
+			}
+			function closePopUp() {
+				popup.classList.remove("open-popup");
+				overlay.classList.remove("open-overlay");
+			}
+		</script>
+		
+		<!-- jquery Min JS -->
+        <script src="{% static 'eclinic_app/js/jquery.min.js' %}"></script>
+		<!-- jquery Migrate JS -->
+		<script src="{% static 'eclinic_app/js/jquery-migrate-3.0.0.js' %}"></script>
+		<!-- jquery Ui JS -->
+		<script src="{% static 'eclinic_app/js/jquery-ui.min.js' %}"></script>
+		<!-- Easing JS -->
+        <script src="{% static 'eclinic_app/js/easing.js' %}"></script>
+		<!-- Color JS -->
+		<script src="{% static 'eclinic_app/js/colors.js' %}"></script>
+		<!-- Popper JS -->
+		<script src="{% static 'eclinic_app/js/popper.min.js' %}"></script>
+		<!-- Bootstrap Datepicker JS -->
+		<script src="{% static 'eclinic_app/js/bootstrap-datepicker.js' %}"></script>
+		<!-- Jquery Nav JS -->
+        <script src="{% static 'eclinic_app/js/jquery.nav.js' %}"></script>
+		<!-- Slicknav JS -->
+		<script src="{% static 'eclinic_app/js/slicknav.min.js' %}"></script>
+		<!-- ScrollUp JS -->
+        <script src="{% static 'eclinic_app/js/jquery.scrollUp.min.js' %}"></script>
+		<!-- Niceselect JS -->
+		<script src="{% static 'eclinic_app/js/niceselect.js' %}"></script>
+		<!-- Tilt Jquery JS -->
+		<script src="{% static 'eclinic_app/js/tilt.jquery.min.js' %}"></script>
+		<!-- Owl Carousel JS -->
+        <script src="{% static 'eclinic_app/js/owl-carousel.js' %}"></script>
+		<!-- counterup JS -->
+		<script src="{% static 'eclinic_app/js/jquery.counterup.min.js' %}"></script>
+		<!-- Steller JS -->
+		<script src="{% static 'eclinic_app/js/steller.js' %}"></script>
+		<!-- Wow JS -->
+		<script src="{% static 'eclinic_app/js/wow.min.js' %}"></script>
+		<!-- Magnific Popup JS -->
+		<script src="{% static 'eclinic_app/js/jquery.magnific-popup.min.js' %}"></script>
+		<!-- Counter Up CDN JS -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="{% static 'eclinic_app/js/bootstrap.min.js' %}"></script>
+		<!-- Main JS -->
+		<script src="{% static 'eclinic_app/js/main.js' %}"></script>
+    </body>
+</html>
