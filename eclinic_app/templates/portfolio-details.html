@@ -1,5 +1,6 @@
+{% load static %}
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html lang = "en">
     <head>
         <!-- Meta Tags -->
 		<meta charset="utf-8">
@@ -10,39 +11,38 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Title -->
-        <title>Medicare - Your trusted partner in wellness.</title>
+        <title>Medicare - Your Trusted Partner in Wellness</title>
 		
 		<!-- Favicon -->
-        <link rel="icon" href="img/favicon.png">
+        <link rel="icon" href="{% static 'eclinic_app/img/favicon.png' %}">
 		
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type = "text/css" href="{% static 'eclinic_app/css/bootstrap.min.css' %}">
 		<!-- Nice Select CSS -->
-		<link rel="stylesheet" href="css/nice-select.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/nice-select.css' %}">
 		<!-- Font Awesome CSS -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/font-awesome.min.css' %}">
 		<!-- icofont CSS -->
-        <link rel="stylesheet" href="css/icofont.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/icofont.css' %}">
 		<!-- Slicknav -->
-		<link rel="stylesheet" href="css/slicknav.min.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/slicknav.min.css' %}">
 		<!-- Owl Carousel CSS -->
-        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/owl-carousel.css' %}">
 		<!-- Datepicker CSS -->
-		<link rel="stylesheet" href="css/datepicker.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/datepicker.css' %}">
 		<!-- Animate CSS -->
-        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/animate.min.css' %}">
 		<!-- Magnific Popup CSS -->
-        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/magnific-popup.css' %}">
 		
 		<!-- Medipro CSS -->
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="css/responsive.css">
-		
-    </head>
+        <link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/normalize.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'eclinic_app/css/responsive.css' %}">
+	</head>
     <body>
 	
 		<!-- Preloader -->
@@ -60,28 +60,24 @@
             </div>
         </div>
         <!-- End Preloader -->
+		
 	
 		<!-- Header Area -->
-		<header class="header" >
+		<header class="header" style = "padding-bottom: 16px;" >
 			<!-- Topbar -->
 			<div class="topbar">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6 col-md-5 col-12">
 							<!-- Contact -->
-							<ul class="top-link">
-								<li><a href="#">About</a></li>
-								<li><a href="#">Doctors</a></li>
-								<li><a href="#">Contact</a></li>
-								<li><a href="#">FAQ</a></li>
-							</ul>
+							
 							<!-- End Contact -->
 						</div>
 						<div class="col-lg-6 col-md-7 col-12">
 							<!-- Top Contact -->
 							<ul class="top-contact">
-								<li><i class="fa fa-phone"></i>+880 1234 56789</li>
-								<li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">support@yourmail.com</a></li>
+								<li><i class="fa fa-phone"></i>+91 12345 67890</li>
+								<li><i class="fa fa-envelope"></i><a href="mailto:nishabisht165@gmail.com">supportmedicare@gmail.com</a></li>
 							</ul>
 							<!-- End Top Contact -->
 						</div>
@@ -90,57 +86,33 @@
 			</div>
 			<!-- End Topbar -->
 			<!-- Header Inner -->
-			<div class="header-inner">
+			<div class="header-inner" >
 				<div class="container">
 					<div class="inner">
 						<div class="row">
 							<div class="col-lg-3 col-md-3 col-12">
 								<!-- Start Logo -->
 								<div class="logo">
-									<a href="index.html"><img src="img/logo.png" alt="#"></a>
+									<a href="{% url 'home' %}"><img src="{% static 'eclinic_app/img/logo.png' %}" alt="#"></a>
 								</div>
 								<!-- End Logo -->
 								<!-- Mobile Nav -->
 								<div class="mobile-nav"></div>
 								<!-- End Mobile Nav -->
 							</div>
-							<div class="col-lg-7 col-md-9 col-12">
-								<!-- Main Menu -->
-								<div class="main-menu">
-									<nav class="navigation">
-										<ul class="nav menu">
-											<li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
-													<li><a href="index.html">Home Page 1</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Doctos </a></li>
-											<li><a href="#">Services </a></li>
-											<li><a href="#">Pages <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
-													<li><a href="404.html">404 Error</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
-													<li><a href="blog-single.html">Blog Details</a></li>
-												</ul>
-											</li>
-											<li><a href="contact.html">Contact Us</a></li>
-										</ul>
-									</nav>
+							<div class="col-lg-9 col-md-9 col-12 text-right">
+								<div class="get-quote d-inline-block"> 
+									<a href="{% url 'home' %}" class="btn">Back to Home</a>
 								</div>
-								<!--/ End Main Menu -->
-							</div>
-							<div class="col-lg-2 col-12">
-								<div class="get-quote">
-									<a href="appointment.html" class="btn">Book Appointment</a>
+								<div class="get-quote d-inline-block ml-3">
+									<a href="{% url 'appointment' %}" class="btn">Book Appointment</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			
 			<!--/ End Header Inner -->
 		</header>
 		<!-- End Header Area -->
@@ -153,7 +125,7 @@
 						<div class="col-12">
 							<h2>Portfolio Details</h2>
 							<ul class="bread-list">
-								<li><a href="index.html">Home</a></li>
+								<li><a href="{% url 'home' %}">Home</a></li>
 								<li><i class="icofont-simple-right"></i></li>
 								<li class="active">Portfolio Details</li>
 							</ul>
@@ -172,32 +144,24 @@
 						<div class="inner-content">
 							<div class="image-slider">
 								<div class="pf-details-slider">
-									<img src="img/call-bg.jpg" alt="#">
-									<img src="img/call-bg.jpg" alt="#">
-									<img src="img/call-bg.jpg" alt="#">
+									<img src="{% static 'eclinic_app/img/call-bg.jpg' %}" alt="#">
+									<img src="{% static 'eclinic_app/img/call-bg.jpg' %}" alt="#">
+									<img src="{% static 'eclinic_app/img/call-bg.jpg' %}" alt="#">
 								</div>
 							</div>
 							<div class="date">
 								<ul>
 									<li><span>Category :</span> Heart Surgery</li>
-									<li><span>Date :</span> April 20, 2019</li>
-									<li><span>Client :</span> Suke Agency</li>
-									<li><span>Ags :</span> Typo</li>
+									<li><span>Date :</span> April 20, 2024</li>
+									<li><span>Client :</span> Cris</li>
+									<li><span>Age :</span> 21</li>
 								</ul>
 							</div>
 							<div class="body-text">
-								<h3>Here is the name of this project here</h3>
+								<h3>Heart Surgery</h3>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor a ti incididunt ut labore et dolore to in magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in a in to in a consectetur.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna in a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod</p>
 								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna to in aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. </p>
 								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod. dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.</p>
-								<div class="share">
-									<h4>Share Now -</h4>
-									<ul>
-										<li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-									</ul>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -205,7 +169,6 @@
 			</div>
 		</section>
 		<!-- End Portfolio Details Area -->
-		
 		<!-- Footer Area -->
 		<footer id="footer" class="footer ">
 			<!-- Copyright -->
@@ -225,44 +188,44 @@
 		<!--/ End Footer Area -->
 		
 		<!-- jquery Min JS -->
-        <script src="js/jquery.min.js"></script>
+        <script src="{% static 'eclinic_app/js/jquery.min.js' %}"></script>
 		<!-- jquery Migrate JS -->
-		<script src="js/jquery-migrate-3.0.0.js"></script>
+		<script src="{% static 'eclinic_app/js/jquery-migrate-3.0.0.js' %}"></script>
 		<!-- jquery Ui JS -->
-		<script src="js/jquery-ui.min.js"></script>
+		<script src="{% static 'eclinic_app/js/jquery-ui.min.js' %}"></script>
 		<!-- Easing JS -->
-        <script src="js/easing.js"></script>
+        <script src="{% static 'eclinic_app/js/easing.js' %}"></script>
 		<!-- Color JS -->
-		<script src="js/colors.js"></script>
+		<script src="{% static 'eclinic_app/js/colors.js' %}"></script>
 		<!-- Popper JS -->
-		<script src="js/popper.min.js"></script>
+		<script src="{% static 'eclinic_app/js/popper.min.js' %}"></script>
 		<!-- Bootstrap Datepicker JS -->
-		<script src="js/bootstrap-datepicker.js"></script>
+		<script src="{% static 'eclinic_app/js/bootstrap-datepicker.js' %}"></script>
 		<!-- Jquery Nav JS -->
-        <script src="js/jquery.nav.js"></script>
+        <script src="{% static 'eclinic_app/js/jquery.nav.js' %}"></script>
 		<!-- Slicknav JS -->
-		<script src="js/slicknav.min.js"></script>
+		<script src="{% static 'eclinic_app/js/slicknav.min.js' %}"></script>
 		<!-- ScrollUp JS -->
-        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="{% static 'eclinic_app/js/jquery.scrollUp.min.js' %}"></script>
 		<!-- Niceselect JS -->
-		<script src="js/niceselect.js"></script>
+		<script src="{% static 'eclinic_app/js/niceselect.js' %}"></script>
 		<!-- Tilt Jquery JS -->
-		<script src="js/tilt.jquery.min.js"></script>
+		<script src="{% static 'eclinic_app/js/tilt.jquery.min.js' %}"></script>
 		<!-- Owl Carousel JS -->
-        <script src="js/owl-carousel.js"></script>
+        <script src="{% static 'eclinic_app/js/owl-carousel.js' %}"></script>
 		<!-- counterup JS -->
-		<script src="js/jquery.counterup.min.js"></script>
+		<script src="{% static 'eclinic_app/js/jquery.counterup.min.js' %}"></script>
 		<!-- Steller JS -->
-		<script src="js/steller.js"></script>
+		<script src="{% static 'eclinic_app/js/steller.js' %}"></script>
 		<!-- Wow JS -->
-		<script src="js/wow.min.js"></script>
+		<script src="{% static 'eclinic_app/js/wow.min.js' %}"></script>
 		<!-- Magnific Popup JS -->
-		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="{% static 'eclinic_app/js/jquery.magnific-popup.min.js' %}"></script>
 		<!-- Counter Up CDN JS -->
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 		<!-- Bootstrap JS -->
-		<script src="js/bootstrap.min.js"></script>
+		<script src="{% static 'eclinic_app/js/bootstrap.min.js' %}"></script>
 		<!-- Main JS -->
-		<script src="js/main.js"></script>
+		<script src="{% static 'eclinic_app/js/main.js' %}"></script>
     </body>
 </html>

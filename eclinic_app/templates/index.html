@@ -169,7 +169,7 @@
 											</li>
 											<li><a href="{% url 'doctors' %}">Doctos </a></li>
 											<li><a href="#services-section">Services </a></li>
-											{% comment %} <li><a href="#pricing">Plans</a></li> {% endcomment %}
+											{% comment %} <li><a href="{% url 'portfolio' %}">Portfolio</a></li> {% endcomment %}
 											<li><a href="{% url 'blog' %}">Blogs</a></li>
 											<li><a href="{% url 'contactus' %}">Contact Us</a></li>
 										</ul>
@@ -892,18 +892,6 @@
 			<!--/ End Copyright -->
 		</footer>
 		<!--/ End Footer Area -->
-		<script>
-			let popup = document.getElementById("popup");
-		
-			function openPopUp() {
-				popup.classList.add("open-popup");
-				overlay.classList.add("open-overlay");
-			}
-			function closePopUp() {
-				popup.classList.remove("open-popup");
-				overlay.classList.remove("open-overlay");
-			}
-		</script>
 		
 		<!-- jquery Min JS -->
         <script src="{% static 'eclinic_app/js/jquery.min.js' %}"></script>
