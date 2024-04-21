@@ -1,6 +1,6 @@
 {% load static %}
-<!doctype html>
-<html lang = "en">
+{% load i18n %}
+<html>
     <head>
         <!-- Meta Tags -->
 		<meta charset="utf-8">
@@ -150,7 +150,7 @@
 				<div class="container">
 					<div class="inner">
 						<div class="row">
-							<div class="col-lg-3 col-md-3 col-12">
+							<div class="col-lg-2 col-md-3 col-12">
 								<!-- Start Logo -->
 								<div class="logo">
 									<a href="{% url 'home' %}"><img src="{% static 'eclinic_app/img/logo.jpg' %}" alt="#"></a>
@@ -165,7 +165,7 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											<li class="active"><a href="{% url 'home' %}">Home</a>
+											<li class="active"><a href="{% url 'home' %}">{% trans 'Home' %}</a>
 											</li>
 											<li><a href="{% url 'doctors' %}">Doctos </a></li>
 											<li><a href="#services-section">Services </a></li>
@@ -180,7 +180,7 @@
 							</div>
 								
 							{% if user.is_authenticated %}
-							<span class = "hello-msg">Hello, {{request.user}} </span>
+							<span class = "hello-msg">{{hello}}, {% trans "I am" %} {{request.user}} </span>
 							
 							<div class="col-lg-1 col-6">
 								<div class="get-quote">

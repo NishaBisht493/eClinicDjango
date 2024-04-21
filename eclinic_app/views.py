@@ -6,10 +6,13 @@ from .forms import CreateUserForm, AppointmentForm, ContactForm, CommentForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
-# Create your views here.
-# @login_required(login_url='login') 
+from django.utils.translation import gettext as _
+
 def home(request):
-    return render(request, 'index.html', {})
+    context = {
+        'hello' : _('Hello')
+    }
+    return render(request, 'index.html', context)
 
 @login_required(login_url='login') 
 def contactus(request):
